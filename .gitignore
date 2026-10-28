@@ -1,0 +1,17 @@
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+
+# Python / backend
+backend/.venv/
+__pycache__/
+*.pyc
+
+# Saved samples (database + photos) — real data, keep out of git
+backend/data/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
