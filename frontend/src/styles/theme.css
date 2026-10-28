@@ -1,0 +1,44 @@
+/*
+ * ISU theme — every color, font and size used by the app lives here.
+ * Change a value once and it updates everywhere.
+ */
+:root {
+  /* Iowa State University brand colors */
+  --isu-cardinal: #c8102e;
+  --isu-cardinal-dark: #9e0b22;
+  --isu-cardinal-tint: #fdecee;
+  --isu-gold: #f1be48;
+  --isu-gold-tint: #fcefc7;
+
+  /* Neutrals */
+  --color-bg: #f7f5f2;
+  --color-surface: #ffffff;
+  --color-text: #1e1a18;
+  --color-text-muted: #4a433e;
+  --color-text-subtle: #5c5550;
+  --color-border: #e2ddd7;
+  --color-input-border: #cfc8c1;
+
+  /* Type */
+  --font-body: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: 'Roboto Condensed', 'Arial Narrow', system-ui, sans-serif;
+
+  /* Shape and spacing */
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --page-max-width: 1280px;
+  --page-gutter: 16px;
+
+  /* Minimum size for anything you tap */
+  --tap-size: 44px;
+
+  /* Height of the phone bottom navigation bar */
+  --tabbar-height: 64px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --page-gutter: 32px;
+  }
+}

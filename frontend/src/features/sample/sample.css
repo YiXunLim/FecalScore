@@ -1,0 +1,212 @@
+/* ================= Sample details form ================= */
+.sample-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--color-bg);
+}
+
+.sample-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--isu-cardinal);
+  color: #ffffff;
+  padding: calc(env(safe-area-inset-top) + 8px) 12px 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sample-header h1 {
+  font-size: 22px;
+}
+.sample-header__back {
+  width: var(--tap-size);
+  height: var(--tap-size);
+  border: 0;
+  background: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sample-form {
+  max-width: 560px;
+  padding-top: 16px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sample-photo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.sample-photo img {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: #1e1a18;
+}
+.sample-photo__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+.sample-photo__text strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field__optional {
+  font-weight: 400;
+  color: var(--color-text-subtle);
+}
+
+.form-alert {
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--isu-cardinal-tint);
+  color: var(--isu-cardinal-dark);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.sample-form__save {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Score buttons */
+.score-field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.score-field legend {
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.score-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.score-button {
+  position: relative;
+  min-height: 58px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-input-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 26px;
+  cursor: pointer;
+}
+.score-button.is-selected {
+  background: var(--isu-cardinal);
+  border-color: var(--isu-cardinal);
+  color: #ffffff;
+}
+.is-invalid-group .score-button {
+  border-color: var(--isu-cardinal);
+}
+
+.score-button__ai {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: var(--isu-gold);
+  color: var(--color-text);
+}
+
+/* ================= Saved confirmation ================= */
+.saved {
+  max-width: 560px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: calc(env(safe-area-inset-top) + 48px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 28px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.saved__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  background: var(--isu-gold);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saved__title {
+  font-size: 30px;
+}
+
+.saved__details {
+  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+.saved__details dt {
+  font-size: 12px;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.saved__details dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.saved__actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.saved__home {
+  min-height: var(--tap-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}

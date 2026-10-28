@@ -1,0 +1,88 @@
+/* Form fields shared by every form in the app. */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.field__label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.field__hint {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.field__error {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--isu-cardinal-dark);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 14px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-input-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  /* 16px stops iPhones from zooming in when the field is tapped */
+  font-size: 16px;
+}
+.textarea {
+  padding: 12px 14px;
+  resize: vertical;
+}
+.input:focus,
+.textarea:focus {
+  border-color: var(--isu-cardinal);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.15);
+}
+.input.is-invalid,
+.is-invalid {
+  border-color: var(--isu-cardinal);
+  background: var(--isu-cardinal-tint);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Shared search box (icon + input) */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 14px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-input-border);
+  background: var(--color-surface);
+  color: var(--color-text-subtle);
+}
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: var(--color-text);
+}
+.search-box:focus-within {
+  border-color: var(--isu-cardinal);
+}

@@ -1,0 +1,126 @@
+/* Base styles shared by every page. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--isu-cardinal);
+}
+a:hover {
+  color: var(--isu-cardinal-dark);
+}
+
+img,
+svg {
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--isu-gold);
+  outline-offset: 2px;
+}
+
+/* Centered page column with side padding */
+.container {
+  width: 100%;
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-primary {
+  background: var(--isu-cardinal);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  min-height: 56px;
+}
+.btn-primary:hover {
+  background: var(--isu-cardinal-dark);
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: var(--color-surface);
+  border-color: var(--isu-cardinal);
+  color: var(--isu-cardinal);
+}
+.btn-outline:hover {
+  background: var(--isu-cardinal-tint);
+  color: var(--isu-cardinal-dark);
+}
+
+.btn-danger {
+  background: var(--isu-cardinal-dark);
+  color: #ffffff;
+  font-weight: 700;
+}
+.btn-danger:hover {
+  background: #7a0819;
+  color: #ffffff;
+}
+
+/* Text only for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

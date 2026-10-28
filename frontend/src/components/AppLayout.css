@@ -1,0 +1,126 @@
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header ---------- */
+.app-header {
+  background: var(--isu-cardinal);
+  color: #ffffff;
+  padding-top: env(safe-area-inset-top);
+}
+
+.app-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 64px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  min-height: var(--tap-size);
+}
+.brand:hover {
+  color: #ffffff;
+}
+
+.brand__mark {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--isu-gold);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* Top links: hidden on phones (they use the bottom tab bar) */
+.top-nav {
+  display: none;
+  gap: 4px;
+}
+
+.top-nav__link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+}
+.top-nav__link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+}
+.top-nav__link.active {
+  background: var(--isu-gold);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* ---------- Main area ---------- */
+.app-main {
+  flex: 1;
+  /* leave room for the phone tab bar */
+  padding-bottom: calc(var(--tabbar-height) + env(safe-area-inset-bottom) + 16px);
+}
+
+/* ---------- Phone bottom tab bar ---------- */
+.tab-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  height: calc(var(--tabbar-height) + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.tab-bar__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--color-text-subtle);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+.tab-bar__link:hover {
+  color: var(--isu-cardinal);
+}
+.tab-bar__link.active {
+  color: var(--isu-cardinal);
+}
+
+/* ---------- Tablets and PCs ---------- */
+@media (min-width: 768px) {
+  .top-nav {
+    display: flex;
+  }
+  .tab-bar {
+    display: none;
+  }
+  .app-main {
+    padding-bottom: 48px;
+  }
+}
